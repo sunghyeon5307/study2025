@@ -1,0 +1,7 @@
+names:
+- raccoon
+nc: 1
+train: "C:\\Users\\sungh\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\study\\20250901\\roboflow\\\
+  train"
+val: "C:\\Users\\sungh\\OneDrive\\\uBC14\uD0D5 \uD654\uBA74\\study\\20250901\\roboflow\\\
+  valid"
