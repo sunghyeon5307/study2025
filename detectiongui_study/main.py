@@ -11,8 +11,8 @@ class VideoApp(QWidget):
 
         self.controller = upload_video(self.ui)
 
-    def closeEvent(self, e):
-        self.controller.release()
+    # def closeEvent(self, e):
+    #     self.controller.release()
 
 if __name__ == "__main__":
     app = QApplication(sys.argv)

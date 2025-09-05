@@ -39,5 +39,3 @@ class upload_video:
         qimg = QImage(rgb.data, w, h, ch * w, QImage.Format_RGB888)
         pixmap = QPixmap.fromImage(qimg).scaled(self.ui.label_2.size(), Qt.KeepAspectRatio, Qt.SmoothTransformation)
         self.ui.label_2.setPixmap(pixmap)
-
-    
