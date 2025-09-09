@@ -32,9 +32,9 @@ try:
             elif code == "ABS_MT_POSITION_Y":
                 last_y = v;  down_y = v if down_y is None else down_y
             elif code == "ABS_MT_TRACKING_ID":
-                if v != 0xFFFFFFFF:  # touch down
+                if v != 0xFFFFFFFF:  
                     down_x = down_y = last_x = last_y = None
-                else:                # touch up -> 결정
+                else:            
                     if None not in (down_x, down_y, last_x, last_y):
                         x1, y1 = raw_to_pixel(down_x, down_y)
                         x2, y2 = raw_to_pixel(last_x, last_y)
