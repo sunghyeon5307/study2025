@@ -1,7 +1,7 @@
 from ultralytics import YOLO
 import cv2, subprocess, numpy as np
 
-model = YOLO("best.pt")
+model = YOLO("best2.pt")
 
 target = "youtube"  
 # target = "phone"  
