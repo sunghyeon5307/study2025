@@ -3,8 +3,9 @@ import cv2, subprocess, numpy as np
 
 model = YOLO("best2.pt")
 
-target = "youtube"  
-# target = "phone"  
+# target = "youtube"  
+target = "phone"  
+# target = "google"  
 
 def cap_screen():
     res = subprocess.run(["adb", "exec-out", "screencap", "-p"], stdout=subprocess.PIPE)
