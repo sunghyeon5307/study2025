@@ -1,5 +1,5 @@
 # 터치 패널 고유 범위 -> 화면 해상도 픽셀
-import subprocess, re, sys
+import subprocess, re
 
 
 dev_path = "/dev/input/event7"

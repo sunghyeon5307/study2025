@@ -22,7 +22,9 @@ with open("touch_log.tsv", "w", encoding="utf-8") as f:
             continue  
 
         x1, y1, x2, y2 = map(int, i.xyxy[0].tolist())
+
         cx, cy = (x1 + x2)//2, (y1 + y2)//2
+        
         conf = float(i.conf[0])
         print(f"{cls}: center=({cx},{cy}), conf={conf:.2f}")
         f.write(f"{cls}\t{cx}\t{cy}\n")
