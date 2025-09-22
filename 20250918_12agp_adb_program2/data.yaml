@@ -1,0 +1,5 @@
+names:
+  0: music
+  1: home
+path: .
+train: train.txt

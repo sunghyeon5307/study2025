@@ -1,7 +1,7 @@
 import subprocess, time
 
 file_name = "touch_log.tsv"
-swipe = 100
+swipe = 1000
 rest = 1.0
 
 with open(file_name, "r", encoding="utf-8") as f:
