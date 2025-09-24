@@ -73,21 +73,17 @@
 import subprocess
 import time
 
-# 캡처할 총 장수
-total_captures = 40
+total_captures = 100
 
-# 저장 폴더와 파일명 패턴
-save_dir = r"C:\study\20250915_12agp_adb_program\data"
-file_prefix = "mymenu180"
+save_dir = r"C:\study\20250915_12agp_adb_program\data\main"
+file_prefix = "mymenu"
 
-# 폴더 없으면 생성
 import os
 os.makedirs(save_dir, exist_ok=True)
 
 for i in range(1, total_captures + 1):
-    filename = f"{save_dir}{file_prefix}_{i:03d}.png"
+    filename = f"{file_prefix}_{i:03d}.png"
     with open(filename, "wb") as f:
         subprocess.run(["adb", "exec-out", "screencap", "-p"], stdout=f)
     print(f"[{i}/{total_captures}] Saved {filename}")
-    # 캡처 간격 (필요하면 조절, 너무 빠르면 기기가 버벅일 수 있음)
     time.sleep(0.2)

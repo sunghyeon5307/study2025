@@ -3,8 +3,7 @@ import cv2, subprocess, numpy as np
 import time
 import easyocr, re
 
-model = YOLO("best2.pt") # home, menu, audio
-model2 = YOLO("best1.pt") # home, menu, audio
+model = YOLO("best.pt") # home, menu, audio
 
 file = "touch_log.tsv"
 
@@ -71,6 +70,7 @@ def cap_screen():
     res = subprocess.run(["adb", "exec-out", "screencap", "-p"], stdout=subprocess.PIPE)
     return cv2.imdecode(np.frombuffer(res.stdout, np.uint8), cv2.IMREAD_COLOR)
 
+
 def read(result):
     with open("touch_log.tsv", "w", encoding="utf-8") as f:
         for i in result.boxes:
@@ -94,6 +94,8 @@ def run():
             subprocess.run(["adb", "shell", "input", "tap", x, y])
 
             time.sleep(2)  
+
+
 
 img = cap_screen()
 result = model.predict(source=img, conf=0.45, verbose=False, device=0)[0]
@@ -131,7 +133,7 @@ else:
 
 
 img = cap_screen()
-result = model2.predict(source=img, conf=0.45, verbose=False, device=0)[0]
+result = model.predict(source=img, conf=0.45, verbose=False, device=0)[0]
 read(result)
 run()
 annotated3 = result.plot()
