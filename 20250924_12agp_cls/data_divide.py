@@ -5,7 +5,9 @@ save_folder = r"C:\study\20250924_12agp_cls\dataset"
 split = 0.8             
 
 random.seed(42)
+
 classes = sorted(next(os.walk(folder))[1])
+
 for split in ["train","val"]:
     for c in classes:
         os.makedirs(os.path.join(save_folder, split, c), exist_ok=True)
