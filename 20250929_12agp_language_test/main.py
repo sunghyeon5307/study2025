@@ -6,8 +6,8 @@ import easyocr, re
 reader_ko = easyocr.Reader(['ko'], gpu=True)
 reader_ja = easyocr.Reader(['ja'], gpu=True)
 reader_en = easyocr.Reader(['en'], gpu=True)
-reader_ch_sim = easyocr.Reader(['ch_sim'], gpu=True)
-reader_ch_tra = easyocr.Reader(['ch_tra'], gpu=True)
+reader_ch_sim = easyocr.Reader(['ch_sim','en'], gpu=True)
+reader_ch_tra = easyocr.Reader(['ch_tra','en'], gpu=True)
 reader_fr = easyocr.Reader(['fr'], gpu=True)
 reader_vi = easyocr.Reader(['vi'], gpu=True)
 
