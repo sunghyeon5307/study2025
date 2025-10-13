@@ -11,5 +11,4 @@ with open(INFILE, "r", encoding="utf-8") as f:
 
         subprocess.run(["adb", "shell", "input", "tap", x, y])
 
-        
         time.sleep(1)                                                       
