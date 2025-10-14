@@ -11,7 +11,6 @@ xml_file = "window_dump.xml"
 
 try:
     while True:
-        # 화면 캡처 및 YOLO 추론
         now_frame = cap_screen()
         results = model(now_frame, device=0, half=True)
         r0 = results[0]
