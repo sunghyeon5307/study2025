@@ -4,7 +4,7 @@ import cv2
 import numpy as np
 import torch
 
-model = YOLO("best2.pt")
+model = YOLO("best.pt")
 
 
 def capture():

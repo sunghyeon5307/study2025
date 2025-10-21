@@ -12,7 +12,7 @@ def test():
     results = model(now_frame, device=0, half=True)
     r0 = results[0]
 
-
+  
     xml_file = "window_dump.xml"
     os.remove(xml_file)
     subprocess.run(["adb", "shell", "uiautomator", "dump"])
@@ -38,7 +38,7 @@ def test():
 
 
 
-if __name__ == "__maiin__":
+if __name__ == "__main__":
     while True:
         test()
-        t
+        time.sleep(1)
