@@ -16,7 +16,7 @@ def ocr_check():
     c_text = len(texts)
     return texts, c_text
 
-def ocr_keyword():
+def ocr_save_keyword():
     messages = {
         "홈 화면": ["rpm", "영상 입력 신호가 없습니다."],
         "시스템 설정 화면": ["시스템 설정", "화면 설정", "날짜 및 시간 설정", "언어 설정", "단위 설정", "소프트웨어 업데이트", "추가기능 설치"],
@@ -32,7 +32,7 @@ def ocr_keyword():
     page = None
     result=0
     texts, c_text = ocr_check()
-    for key, keywords in messages.items():
+    for keyword, keywords in messages.items():
         match_count = 0
         for kw in keywords:
             for text in texts:
@@ -45,7 +45,7 @@ def ocr_keyword():
         accuracy = (match_count / total_count)
         
         if accuracy >= 0.7:
-            page = key
+            page = keyword
             result  = accuracy
-            print(f"ocr 분류된 화면: {key}, 정확도: {result:.2f}")
-    return result
+            print(f"ocr 분류된 화면: {keyword}, 정확도: {result:.2f}")
+    return keyword, result

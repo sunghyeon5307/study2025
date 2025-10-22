@@ -18,7 +18,7 @@ def classify():
     top_name = model.names[top_id]
     return top_id, top_name, results
 
-def keyword():
+def cls_save_keyword():
     top_id, top_name,result = classify()
     messages = {
         "system_setting": "시스템 설정 화면",
@@ -35,7 +35,7 @@ def keyword():
     conf = float(result[0].probs.top1conf)
     if top_name in messages:
         print(f"cls 분류된 화면: {messages[top_name]}, 정확도: {conf:.2f}")
-    return conf
+    return messages[top_name], conf
 
 # def show_result():
 #     print_text = keyword()

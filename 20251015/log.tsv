@@ -1,2 +1,9 @@
+X=727,Y=1825
+X=278,Y=1472
+ID:사용자 관리 화면
+METHOD:dump
 
+X=768,Y=1836
+ID:홈 화면
+METHOD:cls
 

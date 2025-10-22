@@ -35,11 +35,8 @@ def xml_bring():
     with open("window_dump.xml", "r", encoding="utf-8") as f:
         xml = f.read()
 
-def save_keyword():
+def dump_save_keyword():
     xml_bring()
     keyword, result = ui_dump_keyword()
     print(f"dump 분류된 화면: {keyword}, 정확도: {result}")
     return keyword, result
-    # with open("log.tsv", "a", encoding="utf-8") as f:
-    #     keyword = ui_dump_keyword()
-    #     f.write("method:" + keyword + "\n\n")
