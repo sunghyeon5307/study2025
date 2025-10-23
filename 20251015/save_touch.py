@@ -16,3 +16,4 @@ def write_touch(rx, ry):
     with open("log.tsv", "a", encoding="utf-8") as f:
         f.write(f"X={rx},Y={ry}\n")
 
+ 
