@@ -38,8 +38,8 @@ class App(QWidget):
 
         overlay = Image.open(self.img2_path).convert("RGBA")
         overlay = remove(overlay)
-        overlay_width = overlay.width // 4
-        overlay_height = overlay.height // 4
+        overlay_width = overlay.width // 3
+        overlay_height = overlay.height // 3
         overlay = overlay.resize((overlay_width, overlay_height))
 
         results = self.model.predict(source=str(self.img1_path))

@@ -24,6 +24,7 @@ def ui_dump_keyword():
     else:
         return "Unknown"
 
+
 def xml_bring():
     xml_file = "window_dump.xml"
     if os.path.exists(xml_file):
@@ -35,8 +36,10 @@ def xml_bring():
     with open("window_dump.xml", "r", encoding="utf-8") as f:
         xml = f.read()
 
-def dump_save_keyword():
+
+def dump_save_keyword():  # self 파라미터 제거
     xml_bring()
     keyword, result = ui_dump_keyword()
-    print(f"dump 분류된 화면: {keyword}, 정확도: {result}")
-    return keyword, result
+    dump_print = f"dump 분류된 화면: {keyword}, 정확도: {result:.2f}"
+
+    return dump_print, keyword, result

@@ -12,8 +12,8 @@ def read_touch():
             print("Y =", y)
             return x, y
 
-def write_touch(rx, ry):
+def write_touch(x, y):
     with open("log.tsv", "a", encoding="utf-8") as f:
-        f.write(f"X={rx},Y={ry}\n")
+        f.write(f"X={x},Y={y}\n")
+    return f"X = {x}\nY = {y}" 
 
- 

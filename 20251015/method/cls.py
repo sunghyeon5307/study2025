@@ -34,8 +34,8 @@ def cls_save_keyword():
     }
     conf = float(result[0].probs.top1conf)
     if top_name in messages:
-        print(f"cls 분류된 화면: {messages[top_name]}, 정확도: {conf:.2f}")
-    return messages[top_name], conf
+        cls_print = f"cls 분류된 화면: {messages[top_name]}, 정확도: {conf:.2f}"
+    return cls_print, messages[top_name], conf
 
 # def show_result():
 #     print_text = keyword()

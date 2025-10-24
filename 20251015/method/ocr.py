@@ -47,5 +47,5 @@ def ocr_save_keyword():
         if accuracy >= 0.7:
             page = keyword
             result  = accuracy
-            print(f"ocr 분류된 화면: {keyword}, 정확도: {result:.2f}")
-    return keyword, result
+            ocr_print = f"ocr 분류된 화면: {keyword}, 정확도: {result:.2f}"
+    return ocr_print, keyword, result
