@@ -1,0 +1,28 @@
+X=658,Y=1802
+ID:오디오 화면
+METHOD:cls
+
+X=561,Y=1801
+ID:홈 화면
+METHOD:cls
+
+X=116,Y=1799
+ID:사용자 메뉴 화면
+METHOD:cls
+
+X=287,Y=1437
+ID:사용자 관리 화면
+METHOD:cls
+
+X=320,Y=1805
+ID:사용자 메뉴 화면
+METHOD:cls
+
+X=790,Y=1011
+ID:시스템 설정 화면
+METHOD:cls
+
+X=758,Y=1832
+ID:홈 화면
+METHOD:cls
+
