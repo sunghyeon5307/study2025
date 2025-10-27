@@ -1,8 +1,12 @@
-X=167,Y=1792
-ID:사용자 메뉴 화면
-METHOD:dump
+X=286,Y=1833
+ID:홈 화면
+METHOD:cls
 
-X=492,Y=1806
+X=397,Y=1822
+ID:마이 메뉴 화면
+METHOD:cls
+
+X=657,Y=1823
 ID:홈 화면
 METHOD:cls
 

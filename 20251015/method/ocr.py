@@ -2,12 +2,9 @@ import subprocess
 import cv2
 import numpy as np
 import easyocr
+from method.adb_capture import capture
 
 reader = easyocr.Reader(['en', 'ko'], gpu=True)
-
-def capture():
-    res = subprocess.run(["adb", "exec-out", "screencap", "-p"], stdout=subprocess.PIPE)
-    return cv2.imdecode(np.frombuffer(res.stdout, np.uint8), cv2.IMREAD_COLOR)
 
 def ocr_check():
     img = capture()

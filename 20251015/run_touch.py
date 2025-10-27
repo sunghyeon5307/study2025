@@ -13,7 +13,7 @@ def capture():
 
 def match_method(method):
     if method == "dump":
-        dump_print, dump_keyword, _ = dump_save_keyword()  # 반환 3개 언패킹
+        dump_print, dump_keyword, _ = dump_save_keyword()
         return dump_keyword
     elif method == "cls":
         cls_print, cls_keyword, _ = cls_save_keyword()

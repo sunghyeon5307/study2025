@@ -1,14 +1,12 @@
 from ultralytics import YOLO
 import subprocess
 import cv2
-import numpy as np
+import numpy as np, time
+from method.adb_capture import capture    
 
+model = r"C:\study\20251015\best.pt"
 
-model = YOLO("best.pt").to("cuda")
-
-def capture():
-    res = subprocess.run(["adb", "exec-out", "screencap", "-p"], stdout=subprocess.PIPE)
-    return cv2.imdecode(np.frombuffer(res.stdout, np.uint8), cv2.IMREAD_COLOR)
+model = YOLO(model).to("cuda")
 
 def classify():
     img = capture()
