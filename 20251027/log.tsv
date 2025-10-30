@@ -1,28 +1,96 @@
-X=658,Y=1802
+X=631,Y=1814
+ID:장비 설정 화면
+METHOD:ocr
+
+X=827,Y=1832
+ID:장비 설정 화면
+METHOD:ocr
+
+X=68,Y=1803
+ID:장비 설정 화면
+METHOD:ocr
+
+X=276,Y=1463
+ID:장비 설정 화면
+METHOD:ocr
+
+X=628,Y=1832
 ID:오디오 화면
 METHOD:cls
 
-X=561,Y=1801
+X=403,Y=1842
 ID:홈 화면
 METHOD:cls
 
-X=116,Y=1799
-ID:사용자 메뉴 화면
+X=112,Y=1834
+ID:홈 화면
 METHOD:cls
 
-X=287,Y=1437
+X=260,Y=1825
+ID:홈 화면
+METHOD:cls
+
+X=265,Y=1841
+ID:마이 메뉴 화면
+METHOD:cls
+
+X=345,Y=1842
+ID:홈 화면
+METHOD:cls
+
+X=94,Y=1919
+ID:홈 화면
+METHOD:cls
+
+X=103,Y=1806
+ID:홈 화면
+METHOD:cls
+
+X=292,Y=1511
 ID:사용자 관리 화면
 METHOD:cls
 
-X=320,Y=1805
+X=170,Y=1755
 ID:사용자 메뉴 화면
 METHOD:cls
 
-X=790,Y=1011
-ID:시스템 설정 화면
+X=289,Y=1149
+ID:작업자 어시스트 화면
 METHOD:cls
 
-X=758,Y=1832
+X=263,Y=1847
+ID:사용자 메뉴 화면
+METHOD:cls
+
+X=795,Y=727
+ID:장비 설정 화면
+METHOD:cls
+
+X=776,Y=1840
 ID:홈 화면
+METHOD:cls
+
+X=73,Y=1841
+ID:홈 화면
+METHOD:cls
+
+X=112,Y=1849
+ID:사용자 메뉴 화면
+METHOD:cls
+
+X=397,Y=1845
+ID:홈 화면
+METHOD:cls
+
+X=620,Y=1810
+ID:오디오 화면
+METHOD:cls
+
+X=435,Y=1831
+ID:홈 화면
+METHOD:cls
+
+X=108,Y=1840
+ID:사용자 메뉴 화면
 METHOD:cls
 
