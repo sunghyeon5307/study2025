@@ -79,7 +79,7 @@ class MainApp(QWidget):
         img = cv2.imread(path) # 이미지 cv로 읽음
 
         h, w, _ = img.shape
-        if w > 2000 or h > 2000:
+        if w > 2000 or h > 2000: # 2000px
             scale = 2000 / max(w, h)
             img = cv2.resize(img, (int(w * scale), int(h * scale)))
         img = cv2.cvtColor(img, cv2.COLOR_BGR2RGB)
@@ -93,7 +93,7 @@ class MainApp(QWidget):
         if path:
             self.img1_path = path
             self.img_resize(self.ui.label, path)
-        return path
+        return path 
     
     def perspective_transform(self):
         plt.close('all')
@@ -120,8 +120,8 @@ class MainApp(QWidget):
         rectified = cv2.warpPerspective(img_bgr, M, (W, H))
 
         time_set = int(time.time())
-        base_dir = r"C:\study\20251104\Real-ESRGAN"
-        input_dir = r"C:\study\20251104\Real-ESRGAN\input"
+        base_dir = r"C:\study\PerspectiveTransform_SuperResolution_GUI\Real-ESRGAN"
+        input_dir = r"C:\study\PerspectiveTransform_SuperResolution_GUI\Real-ESRGAN\input"
         input_path = os.path.join(input_dir, f"rectified_{time_set}.jpg")
         cv2.imwrite(input_path, rectified)
     
@@ -137,7 +137,7 @@ class MainApp(QWidget):
 
         subprocess.run(command, shell=True)
 
-        out_dir = r"C:\study\20251104\Real-ESRGAN\results"
+        out_dir = r"C:\study\PerspectiveTransform_SuperResolution_GUI\Real-ESRGAN\results"
         result_path = os.path.join(out_dir, f"rectified_{time_set}_out.jpg")
 
         self.img_resize(self.ui.label_2, result_path)
